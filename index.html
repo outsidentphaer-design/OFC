@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OFC • Fiber Optic Asset Manager</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#07111f;color:#e8f1ff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(rgba(42,179,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(42,179,255,.035) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+header{height:72px;border-bottom:1px solid #20354c;background:rgba(7,17,31,.82);backdrop-filter:blur(18px);display:flex;align-items:center;padding:0 28px;gap:18px;position:sticky;top:0;z-index:5}
+.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#18bfff,#6366f1);display:grid;place-items:center;font-weight:900;box-shadow:0 0 30px #18bfff55}.brand b{font-size:18px}.brand span{display:block;font-size:11px;color:#7f94ab;margin-top:2px}
+.status{margin-left:auto;display:flex;align-items:center;gap:8px;color:#8fa5ba;font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:#27e39a;box-shadow:0 0 12px #27e39a}
+main{max-width:1500px;margin:auto;padding:28px}.hero{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:22px}.hero h1{font-size:30px;margin:0 0 6px}.hero p{margin:0;color:#8fa5ba}.btn{border:1px solid #2d4964;background:#0d1b2d;color:#dbeafe;border-radius:10px;padding:10px 15px;cursor:pointer}.btn.primary{background:linear-gradient(135deg,#119fe8,#4f46e5);border:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:linear-gradient(180deg,#0d1b2d,#091522);border:1px solid #20364e;border-radius:16px;padding:18px;box-shadow:0 15px 40px #0003}.label{color:#7890a8;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.num{font-size:29px;font-weight:800;margin-top:8px}.trend{font-size:12px;color:#32e3a0;margin-top:5px}
+.layout{display:grid;grid-template-columns:1.8fr .8fr;gap:16px;margin-top:16px}.map{height:480px;position:relative;overflow:hidden;background:#071421;border:1px solid #20364e;border-radius:18px}.map .gridline{position:absolute;inset:-30%;background:linear-gradient(115deg,transparent 0 43%,#15b9ff22 43.2% 43.5%,transparent 43.7% 55%,#8b5cf622 55.2% 55.5%,transparent 55.7%);transform:rotate(-8deg) scale(1.2)}.road{position:absolute;height:2px;background:#31516c;box-shadow:0 0 10px #31516c;transform-origin:left}.fiber{position:absolute;height:4px;border-radius:5px;background:#16c7ff;box-shadow:0 0 14px #16c7ff;transform-origin:left}.node{position:absolute;width:12px;height:12px;border-radius:50%;background:#dff8ff;border:3px solid #16c7ff;box-shadow:0 0 20px #16c7ff}.maptitle{position:absolute;left:18px;top:16px;background:#091827dd;border:1px solid #27435d;padding:9px 12px;border-radius:10px;z-index:2}.side h3{margin:0 0 14px}.item{padding:13px 0;border-bottom:1px solid #1d3045}.item:last-child{border:0}.item b{font-size:13px}.item small{display:block;color:#758ba0;margin-top:4px}.badge{float:right;padding:4px 7px;border-radius:6px;background:#143c39;color:#54e8b2;font-size:10px}
+.bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px}.bar{height:9px;background:#14283b;border-radius:8px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#12b5ea,#6366f1)}
+footer{text-align:center;color:#587087;font-size:12px;padding:28px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.layout,.bottom{grid-template-columns:1fr}.hero{align-items:flex-start;gap:15px;flex-direction:column}}
+@media(max-width:560px){main{padding:16px}.grid{grid-template-columns:1fr}header{padding:0 16px}}
+</style></head>
+<body>
+<header><div class="logo">O</div><div class="brand"><b>OFC Fiber Asset Manager</b><span>Network • GIS • FTTx • Operations</span></div><div class="status"><i class="dot"></i>System Online</div></header>
+<main>
+<section class="hero"><div><h1>Network Operations Dashboard</h1><p>ภาพรวมโครงข่าย Fiber Optic และสินทรัพย์ภาคสนาม</p></div><button class="btn primary" onclick="alert('ระบบพร้อมเชื่อมต่อกับ application ตัวเต็ม')">Open Network Map</button></section>
+<section class="grid">
+<div class="card"><div class="label">Total Fiber Cable</div><div class="num">428.6 km</div><div class="trend">▲ 8.4% this month</div></div>
+<div class="card"><div class="label">Active Cores</div><div class="num">12,864</div><div class="trend">▲ 3.1% utilization</div></div>
+<div class="card"><div class="label">FTTx Customers</div><div class="num">18,420</div><div class="trend">▲ 412 new endpoints</div></div>
+<div class="card"><div class="label">Open Incidents</div><div class="num">07</div><div class="trend" style="color:#ffbf69">● 2 critical</div></div>
+</section>
+<section class="layout">
+<div class="map card"><div class="maptitle">GIS Network Map · Live</div><div class="gridline"></div>
+<div class="road" style="left:8%;top:76%;width:84%;transform:rotate(-17deg)"></div><div class="road" style="left:16%;top:28%;width:70%;transform:rotate(24deg)"></div><div class="road" style="left:18%;top:55%;width:72%;transform:rotate(4deg)"></div>
+<div class="fiber" style="left:12%;top:70%;width:63%;transform:rotate(-18deg)"></div><div class="fiber" style="left:30%;top:32%;width:48%;transform:rotate(23deg)"></div><div class="fiber" style="left:31%;top:54%;width:55%;transform:rotate(4deg)"></div>
+<div class="node" style="left:11%;top:68%"></div><div class="node" style="left:42%;top:59%"></div><div class="node" style="left:74%;top:48%"></div><div class="node" style="left:29%;top:31%"></div><div class="node" style="left:77%;top:65%"></div></div>
+<div class="card side"><h3>Live Network Events</h3>
+<div class="item"><span class="badge">NORMAL</span><b>OLT-BKK-021</b><small>Core utilization updated · 2 min ago</small></div>
+<div class="item"><span class="badge">RESOLVED</span><b>INC-2026-1042</b><small>Fiber restoration · 11 min ago</small></div>
+<div class="item"><span class="badge" style="background:#4a3020;color:#ffc477">CRITICAL</span><b>NODE-TH-084</b><small>Optical power below threshold · 18 min ago</small></div>
+<div class="item"><span class="badge">NORMAL</span><b>FTTH-ZONE-14</b><small>New customer endpoints · 27 min ago</small></div>
+</div></section>
+<section class="bottom">
+<div class="card"><div class="label">Network Availability</div><div class="num">99.97%</div><div class="bar"><i style="width:99.97%"></i></div></div>
+<div class="card"><div class="label">Core Utilization</div><div class="num">68.4%</div><div class="bar"><i style="width:68.4%"></i></div></div>
+<div class="card"><div class="label">Restoration SLA</div><div class="num">96.2%</div><div class="bar"><i style="width:96.2%"></i></div></div>
+</section>
+</main><footer>OFC Fiber Optic Asset Manager · Enterprise GIS Preview</footer>
+</body></html>
